@@ -2,6 +2,11 @@
 
 void RevertString(char *str)
 {
-	// your code here
+    int N = strlen(str);
+	char *rev_str = malloc(sizeof(char) * (N + 1));
+	for(int i = 0; i < N; i++){
+	   rev_str[i] = str[N-i-1];}
+	strcpy(str, rev_str);
+	free(rev_str);
 }
 
